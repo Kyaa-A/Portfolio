@@ -1,5 +1,6 @@
 import { Briefcase, Code, User } from "lucide-react";
 import React from "react";
+import cvFile from "../assets/CV.jpg";
 
 export const AboutSection = () => {
   return (
@@ -31,7 +32,7 @@ export const AboutSection = () => {
                 Get in Touch
               </a>
               <a
-                href=""
+                href={cvFile}
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
