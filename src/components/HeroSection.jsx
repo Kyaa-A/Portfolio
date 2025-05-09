@@ -5,28 +5,28 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="flex relative flex-col justify-center items-center px-4 min-h-screen"
     >
-      <div className="container max-w-4xl mx-auto text-center z-10">
+      <div className="container z-10 mx-auto max-w-4xl text-center">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold  tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
+            <span className="opacity-0 text-primary animate-fade-in-delay-1">
               {" "}
               Asnari
             </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+            <span className="ml-2 opacity-0 text-gradient animate-fade-in-delay-2">
               {" "}
               Pacalna
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="mx-auto text-lg opacity-0 md:text-xl text-muted-foreground max-2-2xl animate-fade-in-delay-3">
             I craft clean, responsive web interfaces, blending functionality
             with design, while continuously learning and exploring modern
             front-end technologies.
           </p>
           <div className="opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
+            <a href="#projects" className="cosmic-button bg-primary">
               View My Work
             </a>
           </div>
@@ -34,11 +34,10 @@ export const HeroSection = () => {
       </div>
 
       <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce
-"
+        className="flex absolute bottom-8 left-1/2 flex-col items-center animate-bounce transform -translate-x-1/2"
       >
-        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-        <ArrowDown className="h-5 w-5 text-primary" />
+        <span className="mb-2 text-sm text-muted-foreground"> Scroll </span>
+        <ArrowDown className="w-5 h-5 text-primary" />
       </div>
     </section>
   );

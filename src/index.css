@@ -160,3 +160,11 @@
   padding: 0;
   text-align: center;
 }
+
+/* .text-primary-custom {
+  color: hsl(var(--primary));
+}
+.bg-primary-custom {
+  background-color: hsl(var(--primary));
+}
+ */
