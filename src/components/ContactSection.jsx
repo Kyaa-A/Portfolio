@@ -33,7 +33,7 @@ export const ContactSection = () => {
     <section id="contact" className="relative px-4 py-24 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-4 text-3xl font-bold text-center md:text-4xl">
-          Get In <span className="text-primary"> Touch</span>
+          Get In <span className="text-primary-custom-custom"> Touch</span>
         </h2>
 
         <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
@@ -51,41 +51,41 @@ export const ContactSection = () => {
 
             <div className="justify-center space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="w-6 h-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-purple-500/10">
+                  <Mail className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
                     href="mailto:asnari.dep@gmail.com"
-                    className="transition-colors text-muted-foreground hover:text-primary"
+                    className="transition-colors text-muted-foreground hover:text-primary-custom"
                   >
                     asnari.dep@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="w-6 h-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-purple-500/10">
+                  <Phone className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
                     href="tel:+639086932546"
-                    className="transition-colors text-muted-foreground hover:text-primary"
+                    className="transition-colors text-muted-foreground hover:text-primary-custom"
                   >
                     +63 908 693 2546
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="w-6 h-6 text-primary" />{" "}
+                <div className="p-3 rounded-full bg-purple-500/10">
+                  <MapPin className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
                   <h4 className="font-medium"> Location</h4>
-                  <a className="transition-colors text-muted-foreground hover:text-primary">
-                    Davao Del Sur, Phiippines
+                  <a className="transition-colors text-muted-foreground hover:text-primary-custom">
+                    Davao Del Sur, Philippines
                   </a>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "flex gap-2 justify-center items-center w-full cosmic-button"
+                  "flex gap-2 justify-center items-center w-full cosmic-button bg-primary-custom"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

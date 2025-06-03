@@ -37,7 +37,7 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-4 text-3xl font-bold text-center md:text-4xl">
           {" "}
-          Featured <span className="text-primary"> Projects</span>
+          Featured <span className="text-primary-custom"> Projects</span>
         </h2>
 
         <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
@@ -103,7 +103,7 @@ export const ProjectsSection = () => {
 
         <div className="mt-12 text-center">
           <a
-            className="flex gap-2 items-center mx-auto cosmic-button w-fit"
+            className="flex gap-2 items-center mx-auto cosmic-button w-fit bg-primary-custom"
             href="https://github.com/Kyaa-A"
             target="_blank"
           >

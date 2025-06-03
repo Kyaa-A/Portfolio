@@ -36,7 +36,7 @@ export const SkillsSection = () => {
     <section id="skills" className="relative px-4 py-24 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl">
-          My <span className="text-primary"> Skills</span>
+          My <span className="text-primary-custom"> Skills</span>
         </h2>
 
         <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -47,7 +47,7 @@ export const SkillsSection = () => {
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-primary-custom text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
               )}
             >
@@ -67,7 +67,7 @@ export const SkillsSection = () => {
               </div>
               <div className="overflow-hidden w-full h-2 rounded-full bg-secondary/50">
                 <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
+                  className="bg-primary-custom h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                   style={{ width: skill.level + "%" }}
                 />
               </div>

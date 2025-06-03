@@ -11,7 +11,7 @@ export const HeroSection = () => {
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-            <span className="opacity-0 text-primary animate-fade-in-delay-1">
+            <span className="opacity-0 text-primary-custom animate-fade-in-delay-1">
               {" "}
               Asnari
             </span>
@@ -26,7 +26,7 @@ export const HeroSection = () => {
             front-end technologies.
           </p>
           <div className="opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button bg-primary">
+            <a href="#projects" className="cosmic-button bg-primary-custom">
               View My Work
             </a>
           </div>
@@ -37,7 +37,7 @@ export const HeroSection = () => {
         className="flex absolute bottom-8 left-1/2 flex-col items-center animate-bounce transform -translate-x-1/2"
       >
         <span className="mb-2 text-sm text-muted-foreground"> Scroll </span>
-        <ArrowDown className="w-5 h-5 text-primary" />
+        <ArrowDown className="w-5 h-5 text-primary-custom" />
       </div>
     </section>
   );
