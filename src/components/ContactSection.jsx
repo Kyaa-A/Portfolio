@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { SpinnerIcon } from "./SpinnerIcon";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -204,11 +205,11 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "flex gap-2 justify-center items-center w-full cosmic-button bg-primary-custom"
+                  "flex gap-2 justify-center items-center w-full transition-transform duration-150 cosmic-button bg-primary-custom",
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:scale-105"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
+                {isSubmitting ? <SpinnerIcon /> : (<><span>Send Message</span><Send size={16} /></>)}
               </button>
             </form>
           </div>
