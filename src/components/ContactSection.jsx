@@ -1,16 +1,17 @@
 import {
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -18,16 +19,38 @@ export const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    // Set the current time
+    const timeInput = e.target.querySelector("#contact-time");
+    timeInput.value = new Date().toLocaleString();
+
+    emailjs
+      .sendForm(
+        "service_o40ovdc", // Replace with EmailJS service ID
+        "template_8bpu069", // Replace with EmailJS template ID
+        e.target,
+        "JszD4DJ73IiTN0lBp" // Replace with EmailJS user/public key
+      )
+      .then(
+        (result) => {
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for your message. I'll get back to you soon.",
+            duration: 5000,
+          });
+          setIsSubmitting(false);
+        },
+        (error) => {
+          toast({
+            title: "Error",
+            description: "Something went wrong. Please try again later.",
+            duration: 5000,
+          });
+          setIsSubmitting(false);
+        }
+      );
   };
   return (
     <section id="contact" className="relative px-4 py-24 bg-secondary/30">
@@ -55,7 +78,7 @@ export const ContactSection = () => {
                   <Mail className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="pl-1 font-medium">Email</h4>
                   <a
                     href="mailto:asnari.dep@gmail.com"
                     className="transition-colors text-muted-foreground hover:text-primary-custom"
@@ -69,7 +92,7 @@ export const ContactSection = () => {
                   <Phone className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="pl-12 font-medium">Phone</h4>
                   <a
                     href="tel:+639086932546"
                     className="transition-colors text-muted-foreground hover:text-primary-custom"
@@ -83,7 +106,7 @@ export const ContactSection = () => {
                   <MapPin className="w-6 h-6 text-primary-custom" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
+                  <h4 className="pl-1 font-medium">Location</h4>
                   <a className="transition-colors text-muted-foreground hover:text-primary-custom">
                     Davao Del Sur, Philippines
                   </a>
@@ -94,29 +117,32 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="mb-4 font-medium"> Connect With Me</h4>
               <div className="flex justify-center space-x-4">
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/asnari-pacalna-848096255/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://x.com/KyaaMystera" target="_blank">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/asnarsss_/" target="_blank">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a
+                  href="https://www.facebook.com/asnari.pacalna"
+                  target="_blank"
+                >
+                  <Facebook />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
-            className="p-8 rounded-lg bg-card shadow-xs"
-            onSubmit={handleSubmit}
-          >
+          <div className="p-8 rounded-lg bg-card shadow-xs">
             <h3 className="mb-6 text-2xl font-semibold"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -169,6 +195,9 @@ export const ContactSection = () => {
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
+
+              <input type="hidden" name="title" value="Contact Form" />
+              <input type="hidden" name="time" id="contact-time" />
 
               <button
                 type="submit"
