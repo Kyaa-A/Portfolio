@@ -41,6 +41,7 @@ export const ContactSection = () => {
             duration: 5000,
           });
           setIsSubmitting(false);
+          e.target.reset();
         },
         (error) => {
           toast({
