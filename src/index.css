@@ -73,6 +73,8 @@
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
+
+    --primary-bg-opacity: 250 47% 60% / 0.1;
   }
 
   .dark {
@@ -85,6 +87,8 @@
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
+
+    --primary-bg-opacity: 250 65% 65% / 0.1;
   }
 
   * {
@@ -168,3 +172,10 @@
   background-color: hsl(var(--primary));
 }
 
+.bg-primary-opacity {
+  background-color: hsl(var(--primary-bg-opacity));
+}
+
+.hover\:text-primary-custom:hover {
+  color: hsl(var(--primary));
+}

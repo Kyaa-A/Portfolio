@@ -33,7 +33,8 @@ export const AboutSection = () => {
               </a>
               <a
                 href={cvFile}
-                className="px-6 py-2 text-purple-500 rounded-full border border-purple-500 transition-colors duration-300 hover:bg-purple-500/10"
+                className="px-6 py-2 text-purple-500 rounded-full border border-purple-500 transition-colors duration-300 hover:bg-primary-opacity"
+                target="_blank"
               >
                 Download CV
               </a>
@@ -43,7 +44,7 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-6">
             <div className="p-6 gradient-border card-hover">
               <div className="flex gap-4 items-start">
-                <div className="p-3 rounded-full bg-purple-500/10">
+                <div className="p-3 rounded-full bg-primary-opacity">
                   <Code className="w-6 h-6 text-primary-custom" />
                 </div>
                 <div className="text-left">
@@ -60,7 +61,7 @@ export const AboutSection = () => {
             </div>
             <div className="p-6 gradient-border card-hover">
               <div className="flex gap-4 items-start">
-                <div className="p-3 rounded-full bg-purple-500/10">
+                <div className="p-3 rounded-full bg-primary-opacity">
                   <User className="w-6 h-6 text-primary-custom" />
                 </div>
                 <div className="text-left">
@@ -77,7 +78,7 @@ export const AboutSection = () => {
             </div>
             <div className="p-6 gradient-border card-hover">
               <div className="flex gap-4 items-start">
-                <div className="p-3 rounded-full bg-purple-500/10">
+                <div className="p-3 rounded-full bg-primary-opacity">
                   <Briefcase className="w-6 h-6 text-primary-custom" />
                 </div>
                 <div className="text-left">
