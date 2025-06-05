@@ -78,14 +78,14 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="transition-colors duration-300 text-foreground/80 hover:text-primary"
+                      className="transition-colors duration-300 text-foreground/80 hover:text-primary-custom"
                     >
                       <ExternalLink size={20} />
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="transition-colors duration-300 text-foreground/80 hover:text-primary"
+                      className="transition-colors duration-300 text-foreground/80 hover:text-primary-custom"
                     >
                       {" "}
                       <Github size={20} />

@@ -10,7 +10,7 @@ export const Footer = () => {
       </p>
       <a
         href="#hero"
-        className="p-2 rounded-full transition-colors bg-primary/10 hover:bg-primary/20 text-primary-custom"
+        className="p-2 rounded-full transition-colors text-primary-custom bg-purple-500/10 hover:bg-purple-500/20"
       >
         <ArrowUp size={20} />
       </a>
