@@ -8,8 +8,17 @@ const projects = [
     description: "Color Extractor: A tool to extract colors from images.",
     image: "/projects/project1.png",
     tags: ["React", "Tailwind CSS"],
-    demoUrl: "#",
+    demoUrl: "https://asnari-extractor.vercel.app/",
     githubUrl: "#",
+  },
+  {
+    id: 2,
+    title: "Whispr",
+    description: "whispr: A personal AI chatbot desktop application",
+    image: "/projects/Whispr.png",
+    tags: ["Electron", "React", "Tailwind CSS"],
+    demoUrl: "https://www.facebook.com/share/v/1Sgm9Dt2sT/",
+    githubUrl: "https://github.com/Kyaa-A/Whispr-PersonalAI-Chatbot.git",
   },
   {
     id: 1,
@@ -20,15 +29,7 @@ const projects = [
     demoUrl: "#",
     githubUrl: "#",
   },
-  {
-    id: 1,
-    title: "Color Extractor",
-    description: "Color Extractor: A tool to extract colors from images.",
-    image: "/projects/project1.png",
-    tags: ["React", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
+  
 ];
 
 export const ProjectsSection = () => {
